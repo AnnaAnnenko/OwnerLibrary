@@ -2,13 +2,11 @@ package qa.annenko.config;
 
 import org.aeonbits.owner.Config;
 
-public class WebConfig implements Config {
+@Config.Sources({
+        "classpath:${environment}.properties"
+})
 
-    @Sources({
-            "classpath:${env}.properties"
-    })
-
-    public interface webConfig extends Config {
+public interface WebConfig extends Config {
 
         @Key("baseUrl")
         @DefaultValue("https://github.com")
@@ -24,5 +22,4 @@ public class WebConfig implements Config {
 
         @Key("remoteUrl")
         String getRemoteUrl();
-    }
 }
