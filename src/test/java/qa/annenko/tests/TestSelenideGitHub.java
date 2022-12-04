@@ -10,7 +10,7 @@ public class TestSelenideGitHub {
 
     @Test
     public void test(){
-        open("https://github.com/selenide/selenide");
+        open("/selenide/selenide");
         $("#wiki-tab").click();
         $(".wiki-more-pages-link .Link--muted").click();
         $("[data-filterable-for='wiki-pages-filter']").shouldHave(Condition.text("SoftAssertions"));
