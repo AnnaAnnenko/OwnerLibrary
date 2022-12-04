@@ -1,12 +1,14 @@
 package qa.annenko.tests;
 
 import com.codeborne.selenide.Condition;
+import org.junit.jupiter.api.Test;
 
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
 public class TestSelenideGitHub {
 
+    @Test
     public void test(){
         open("https://github.com/selenide/selenide");
         $("#wiki-tab").click();
