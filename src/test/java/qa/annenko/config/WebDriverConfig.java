@@ -6,7 +6,7 @@ import org.aeonbits.owner.Config;
         "classpath:${environment}.properties"
 })
 
-public interface WebConfig extends Config {
+public interface WebDriverConfig extends Config {
 
         @Key("baseUrl")
         @DefaultValue("https://github.com")

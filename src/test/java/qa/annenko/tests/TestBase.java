@@ -1,14 +1,13 @@
 package qa.annenko.tests;
 
 import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.BeforeEach;
-import qa.annenko.config.WebConfigProvider;
+import qa.annenko.config.WebDriverProvider;
 
 public class TestBase {
 
     @BeforeAll
-    public void configureTests() {
-        WebConfigProvider.configure();
+    static void configureTests() {
+        WebDriverProvider.configure();
 
     }
 
